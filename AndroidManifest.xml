@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="jp.goodnightcall.android"
+  android:versionCode="1"
+  android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+
+       android:allowBackup="true"
+        android:name=".AppManager"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+
+      >
+
+        <!--
+        <activity
+          android:label="@string/app_name"
+          android:name="com.twilio.example.hellomonkey.HelloMonkeyActivity"
+          android:screenOrientation="portrait">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		-->
+
+
+
+
+        <activity
+            android:name=".StartActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".ContributionActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_contribution"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Contribute"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <activity
+            android:name=".SignUpActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".LoginSelectorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login_selector"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_home"
+            >
+        </activity>
+
+
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="設定"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".WaitingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="Waiting"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+
+        <activity
+            android:name=".TalkingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="Talking"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+            android:label="@string/title_activity_profile" >
+        </activity>
+
+        <activity
+            android:name=".SearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+            android:label="@string/title_activity_search" >
+        </activity>
+
+        <activity
+            android:name=".ClothesActivity"
+            android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+            android:label="@string/title_activity_clothes" >
+        </activity>
+
+
+        <service
+          android:name="com.twilio.client.TwilioClientService"
+          android:exported="false" />
+
+    </application>
+
+</manifest>
